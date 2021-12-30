@@ -1,7 +1,8 @@
 let arr = ["Rock", "Paper", "Scissors"];
-let playerScore = 0;
-let computerScore = 0;
-
+let playerScore = document.querySelector("#player_score");
+let computerScore = document.querySelector("#computer_score");
+let score1 = 0;
+let score2 = 0;
 let rockBtn = document.querySelector("#rock");
 let paperBtn = document.querySelector("#paper");
 let scissorsBtn = document.querySelector("#scissors");
@@ -13,45 +14,47 @@ const computerPlay = () => {
 
 const playRound = (userChoice, computerChoice) => {
   if (userChoice == "Rock" && computerChoice == "Scissors") {
-    playerScore++;
+    score1++;
+    playerScore.innerHTML = score1.toString();
+    console.log("here");
     return "You win! Rock smashes Scissors!";
   }
   if (userChoice == "Rock" && computerChoice == "Paper") {
-    computerScore++;
+    score2++;
+    computerScore.innerHTML = score2.toString();
+    console.log("here2");
     return "You lose! Paper covers Rock!";
   }
   if (userChoice == "Scissors" && computerChoice == "Paper") {
-    playerScore++;
+    score1++;
+    playerScore.innerHTML = score1;
     return "You win! Scissors cuts Paper!";
   }
   if (userChoice == "Scissors" && computerChoice == "Rock") {
-    computerScore++;
+    score2++;
     return "You lose! Rock smashes Scissors!";
   }
   if (userChoice == "Paper" && computerChoice == "Rock") {
-    playerScore++;
+    score1++;
     return "You win! Paper covers Rock!";
   }
   if (userChoice == "Paper" && computerChoice == "Scissors") {
-    computerScore++;
+    score2++;
     return "You lose! Scissors cuts Paper!";
   }
   return `It's a tie! ${userChoice} is the same a ${computerChoice}`;
 };
 const userChoice = "Rock";
 
-const game = () => {
-  for (let i = 0; i < 4; i++) {
-    const computerChoice = computerPlay();
-    playRound(userChoice, computerChoice);
-    console.log(userChoice, computerChoice);
-  }
-  console.log("user", playerScore, "comp", computerScore);
+const game = (playerChoice) => {
+  const computerChoice = computerPlay();
+  playRound(playerChoice, computerChoice);
 };
 game();
 
 rockBtn.addEventListener("click", () => {
-  console.log("rock was clicked");
+  let userChoice = "Rock";
+  game(userChoice);
 });
 paperBtn.addEventListener("click", () => {
   console.log("paper was clicked");
