@@ -2,6 +2,10 @@ let arr = ["Rock", "Paper", "Scissors"];
 let playerScore = 0;
 let computerScore = 0;
 
+let rockBtn = document.querySelector("#rock");
+let paperBtn = document.querySelector("#paper");
+let scissorsBtn = document.querySelector("#scissors");
+
 const computerPlay = () => {
   let index = Math.floor(Math.random() * arr.length);
   return arr[index];
@@ -45,3 +49,13 @@ const game = () => {
   console.log("user", playerScore, "comp", computerScore);
 };
 game();
+
+rockBtn.addEventListener("click", () => {
+  console.log("rock was clicked");
+});
+paperBtn.addEventListener("click", () => {
+  console.log("paper was clicked");
+});
+scissorsBtn.addEventListener("click", () => {
+  console.log("scissors was clicked");
+});
