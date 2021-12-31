@@ -9,17 +9,32 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
+      <div id='game'>
     <div class="heading"><h1>Rock, Paper, Scissors</h1></div>
     <div class="score-div">
       <h3>Your Score: <span id="player_score">0</span></h3>
-      <h3>Computer Score: <span id="computer_score">0</span></h3>
+      <h3>Computer Score: <span id="computer_score">0</span></h3> 
     </div>
+    <div id=choices>
+        <div class="choice-box">
+            <h4 id="user_choice"></h4>
+        </div>
+        <div class="choice-box">
+            <h4 id="computer_choice"></h4>
+        </div>    
+    </div>
+    <h4 id="who_won"></h4>
     <div class="emojis">
     <span id="rock">&#9994</span>
     <span id="paper">&#9995</span>
     <span id="scissors">&#9996</span>
     </div>  
-    <h4 id="who_won"></h4>
+    </div>
+    <div id="gameover">
+        <h1>The game is over</h1>
+        <h3 id="win-lose"></h3>
+        <button id="try-again">Try Again?</button>
+    </div>
     <script src="./main.js"></script>
   </body>
 </html>
