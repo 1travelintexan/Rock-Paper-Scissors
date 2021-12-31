@@ -2,6 +2,7 @@ let arr = ["Rock", "Paper", "Scissors"];
 let playerScore = document.querySelector("#player_score");
 let computerScore = document.querySelector("#computer_score");
 let startBtn = document.querySelector("#start-button");
+let tryAgainBtn = document.querySelector("#try-again");
 let score1 = 0;
 let score2 = 0;
 let rockBtn = document.querySelector("#rock");
@@ -114,6 +115,18 @@ const game = (playerChoice) => {
 };
 
 startBtn.addEventListener("click", () => {
+  splashScreen.style.display = "none";
+  gameOverScreen.style.display = "none";
+  gameScreen.style.display = "block";
+});
+tryAgainBtn.addEventListener("click", () => {
+  score1 = 0;
+  score2 = 0;
+  playerScore.innerHTML = "0";
+  computerScore.innerHTML = "0";
+  whoWon.innerHTML = "";
+  userBox.innerHTML = "";
+  computerBox.innerHTML = "";
   splashScreen.style.display = "none";
   gameOverScreen.style.display = "none";
   gameScreen.style.display = "block";
