@@ -7,4 +7,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+}
+.emojis {
+  display: flex;
+  justify-content: space-around;
+}
+#rock,
+#paper,
+#scissors {
+  font-size: 13rem;
+  cursor: pointer;
+  padding: 20px;
+}
+
+#rock:hover {
+  font-size: 15rem;
+}
+#paper:hover {
+  font-size: 15rem;
+}
+#scissors:hover {
+  font-size: 15rem;
 }

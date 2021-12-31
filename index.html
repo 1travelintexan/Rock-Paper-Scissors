@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="./images/fist.jpeg" sizes="20x20">
     <link rel="stylesheet" href="./index.css" />
     <title>Rock, Paper, Scissors</title>
   </head>
@@ -11,11 +12,14 @@
     <div class="heading"><h1>Rock, Paper, Scissors</h1></div>
     <div class="score-div">
       <h3>Your Score: <span id="player_score">0</span></h3>
-      <h3>Computer Score:<span id="computer_score">0</span></h3>
+      <h3>Computer Score: <span id="computer_score">0</span></h3>
     </div>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div class="emojis">
+    <span id="rock">&#9994</span>
+    <span id="paper">&#9995</span>
+    <span id="scissors">&#9996</span>
+    </div>  
+    <h4 id="who_won"></h4>
     <script src="./main.js"></script>
   </body>
 </html>
