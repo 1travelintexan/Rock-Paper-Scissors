@@ -1,12 +1,14 @@
 let arr = ["Rock", "Paper", "Scissors"];
 let playerScore = document.querySelector("#player_score");
 let computerScore = document.querySelector("#computer_score");
+let startBtn = document.querySelector("#start-button");
 let score1 = 0;
 let score2 = 0;
 let rockBtn = document.querySelector("#rock");
 let paperBtn = document.querySelector("#paper");
 let scissorsBtn = document.querySelector("#scissors");
 let whoWon = document.querySelector("#who_won");
+let splashScreen = document.querySelector("#splash");
 let gameOverScreen = document.querySelector("#gameOver");
 let gameScreen = document.querySelector("#game");
 let userBox = document.querySelector("#user_choice");
@@ -23,6 +25,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You win! Rock smashes Scissors!";
     userBox.innerHTML = "&#9994";
     computerBox.innerHTML = "&#9996";
+    if (score1 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You win, rock smashes scissors!";
   }
   if (userChoice == "Rock" && computerChoice == "Paper") {
@@ -31,6 +37,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You lose! Paper covers Rock!";
     userBox.innerHTML = "&#9994";
     computerBox.innerHTML = "&#9995";
+    if (score2 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You lose! Paper covers Rock!";
   }
   if (userChoice == "Scissors" && computerChoice == "Paper") {
@@ -39,6 +49,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You win! Scissors cut paper!";
     userBox.innerHTML = "&#9996";
     computerBox.innerHTML = "&#9995";
+    if (score1 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You win! Scissors cuts Paper!";
   }
   if (userChoice == "Scissors" && computerChoice == "Rock") {
@@ -47,6 +61,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You lose! Rock smashes scissors!";
     userBox.innerHTML = "&#9996";
     computerBox.innerHTML = "&#9994";
+    if (score2 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You lose! Rock smashes Scissors!";
   }
   if (userChoice == "Paper" && computerChoice == "Rock") {
@@ -55,6 +73,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You win! Paper covers rock!";
     userBox.innerHTML = "&#9995";
     computerBox.innerHTML = "&#9994";
+    if (score1 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You win! Paper covers Rock!";
   }
   if (userChoice == "Paper" && computerChoice == "Scissors") {
@@ -63,6 +85,10 @@ const playRound = (userChoice, computerChoice) => {
     whoWon.innerHTML = "You lose! Scissors cuts paper!";
     userBox.innerHTML = "&#9995";
     computerBox.innerHTML = "&#9996";
+    if (score2 == 5) {
+      gameScreen.style.display = "none";
+      gameOverScreen.style.display = "block";
+    }
     return "You lose! Scissors cuts Paper!";
   } else {
     if (userChoice == "Paper") {
@@ -87,9 +113,13 @@ const game = (playerChoice) => {
   playRound(playerChoice, computerChoice);
 };
 
+startBtn.addEventListener("click", () => {
+  splashScreen.style.display = "none";
+  gameOverScreen.style.display = "none";
+  gameScreen.style.display = "block";
+});
+
 rockBtn.addEventListener("click", () => {
-  gameScreen.style.display = "none";
-  gameOverScreen.style.display = "block";
   let userChoice = "Rock";
   game(userChoice);
   console.log("rock was clicked");
