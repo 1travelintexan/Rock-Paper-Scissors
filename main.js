@@ -7,11 +7,10 @@ let rockBtn = document.querySelector("#rock");
 let paperBtn = document.querySelector("#paper");
 let scissorsBtn = document.querySelector("#scissors");
 let whoWon = document.querySelector("#who_won");
-let gameoverScreen = document.querySelector("#gameover");
+let gameOverScreen = document.querySelector("#gameOver");
 let gameScreen = document.querySelector("#game");
 let userBox = document.querySelector("#user_choice");
 let computerBox = document.querySelector("#computer_choice");
-
 const computerPlay = () => {
   let index = Math.floor(Math.random() * arr.length);
   return arr[index];
@@ -89,6 +88,8 @@ const game = (playerChoice) => {
 };
 
 rockBtn.addEventListener("click", () => {
+  gameScreen.style.display = "none";
+  gameOverScreen.style.display = "block";
   let userChoice = "Rock";
   game(userChoice);
   console.log("rock was clicked");
