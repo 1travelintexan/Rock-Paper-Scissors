@@ -1,6 +1,6 @@
 body {
   margin: 0px;
-  padding: 0;
+  padding: 0px;
   color: rgb(0, 240, 52);
   background-image: url("./images/matrix.png");
   background-size: cover;
@@ -54,7 +54,7 @@ h3 span {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.815);
   width: 80vw;
-  height: 80vh;
+  height: 100vh;
 }
 #start-button {
   background-color: black;
