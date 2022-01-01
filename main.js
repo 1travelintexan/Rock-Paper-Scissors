@@ -17,6 +17,7 @@ let computerBox = document.querySelector("#computer_choice");
 let winLose = document.querySelector("#final-para");
 let final = document.querySelector(".won-lost");
 let splashDiv = document.querySelector(".splash-div");
+let flex = document.querySelector(".flex");
 
 const computerPlay = () => {
   let index = Math.floor(Math.random() * arr.length);
@@ -93,6 +94,7 @@ const playRound = (userChoice, computerChoice) => {
     if (score1 == 5) {
       gameScreen.style.display = "none";
       gameOverScreen.style.display = "flex";
+      flex.style.display = "flex";
       final.innerHTML = "You Won!";
       winLose.innerHTML =
         "The prophecy is true, you are the one. You have defeated Agent smith and saved mankind.";
@@ -108,6 +110,7 @@ const playRound = (userChoice, computerChoice) => {
     if (score2 == 5) {
       gameScreen.style.display = "none";
       gameOverScreen.style.display = "flex";
+      flex.style.display = "flex";
       final.innerHTML = "You lose!";
       winLose.innerHTML =
         "Agent Smith says that he knew you were not the one and no match for him.";
@@ -139,6 +142,7 @@ const game = (playerChoice) => {
 startBtn.addEventListener("click", () => {
   splashScreen.style.display = "none";
   gameOverScreen.style.display = "none";
+  flex.style.display = "none";
   gameScreen.style.display = "block";
   splashDiv.style.display = "none";
 });
@@ -154,6 +158,7 @@ tryAgainBtn.addEventListener("click", () => {
   splashDiv.style.display = "none";
   splashScreen.style.display = "none";
   gameOverScreen.style.display = "none";
+  flex.style.display = "none";
   gameScreen.style.display = "block";
 });
 
