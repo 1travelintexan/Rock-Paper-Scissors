@@ -9,14 +9,14 @@
     <title>Rock, Paper, Scissors</title>
   </head>
   <body>
-    <div id="splash">
-        <h1>The Matrix is taking over, and has sent its best A.I. bot to fight the humans.
+    <div>
+        <div id="splash">
+        <h1>Agent Smith is taking over!
             <br>
-            It says mankind can survive only if you can beat it in Rock, Paper, Scissors
-            <br>
-            First to 5!
+To prove how pathetic humans are, he has granted us one chance. We have to beat him in a simple game of rock. paper. scissors.            <br>
+            First to 5 wins!
         </h1>
-        <h2>Statistically improbable...</h2> 
+        <h2>He says its statistically improbable for anyone to beat him</h2> 
         <h3>Ready to save to world?</h3>
         <button id="start-button">Play</button>
     </div>
@@ -24,7 +24,7 @@
             <h1 class="heading">Rock, Paper, Scissors</h1>
         <div class="score-div">
             <h3>Your Score: <span id="player_score">0</span></h3>
-            <h3>Matrix Score: <span id="computer_score">0</span></h3> 
+            <h3>Smith's Score: <span id="computer_score">0</span></h3> 
         </div>
         <div id=choices>
             <div class="choice-box">
@@ -41,10 +41,13 @@
             <span id="scissors">&#9996</span>
         </div>  
     </div>
+    <div class="flex">
     <div id="gameOver">
         <h1>The game is over</h1>
         <h3 id="win-lose"></h3>
-        <button id="try-again">Try Again?</button>
+        <h4>He wants to know if you want to play again?</h4>
+        <button id="again-button">Try Again?</button>
+    </div>
     </div>
     <script src="./main.js"></script>
   </body>

@@ -2,7 +2,7 @@ let arr = ["Rock", "Paper", "Scissors"];
 let playerScore = document.querySelector("#player_score");
 let computerScore = document.querySelector("#computer_score");
 let startBtn = document.querySelector("#start-button");
-let tryAgainBtn = document.querySelector("#try-again");
+let tryAgainBtn = document.querySelector("#again-button");
 let score1 = 0;
 let score2 = 0;
 let rockBtn = document.querySelector("#rock");
@@ -14,6 +14,8 @@ let gameOverScreen = document.querySelector("#gameOver");
 let gameScreen = document.querySelector("#game");
 let userBox = document.querySelector("#user_choice");
 let computerBox = document.querySelector("#computer_choice");
+let winLose = document.querySelector("#win-lose");
+
 const computerPlay = () => {
   let index = Math.floor(Math.random() * arr.length);
   return arr[index];
@@ -28,7 +30,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9996";
     if (score1 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "You are the one! You defeated Agent smith and saved mankind.";
     }
     return "You win, rock smashes scissors!";
   }
@@ -40,7 +44,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9995";
     if (score2 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "Agent Smith says he knew you were not the one and no match for him.";
     }
     return "You lose! Paper covers Rock!";
   }
@@ -52,7 +58,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9995";
     if (score1 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "You are the one! You defeated Agent smith and saved mankind.";
     }
     return "You win! Scissors cuts Paper!";
   }
@@ -64,7 +72,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9994";
     if (score2 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "Agent Smith says he knew you were not the one and no match for him.";
     }
     return "You lose! Rock smashes Scissors!";
   }
@@ -76,7 +86,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9994";
     if (score1 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "You are the one! You defeated Agent smith and saved mankind.";
     }
     return "You win! Paper covers Rock!";
   }
@@ -88,7 +100,9 @@ const playRound = (userChoice, computerChoice) => {
     computerBox.innerHTML = "&#9996";
     if (score2 == 5) {
       gameScreen.style.display = "none";
-      gameOverScreen.style.display = "block";
+      gameOverScreen.style.display = "flex";
+      winLose.innerHTML =
+        "Agent Smith says he knew you were not the one and no match for him.";
     }
     return "You lose! Scissors cuts Paper!";
   } else {
@@ -125,6 +139,7 @@ tryAgainBtn.addEventListener("click", () => {
   playerScore.innerHTML = "0";
   computerScore.innerHTML = "0";
   whoWon.innerHTML = "";
+  winLose.innerHTML = "";
   userBox.innerHTML = "";
   computerBox.innerHTML = "";
   splashScreen.style.display = "none";
