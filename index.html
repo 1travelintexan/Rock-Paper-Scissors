@@ -10,16 +10,23 @@
   </head>
   <body>
     <div>
-        <div id="splash">
-        <h1>Agent Smith is taking over!
-            <br>
-To prove how pathetic humans are, he has granted us one chance. We have to beat him in a simple game of rock. paper. scissors.            <br>
-            First to 5 wins!
-        </h1>
-        <h2>He says its statistically improbable for anyone to beat him</h2> 
-        <h3>Ready to save to world?</h3>
-        <button id="start-button">Play</button>
-    </div>
+        <div class="splash-div">
+            <div id="splash">
+                <h1>Agent Smith is taking over!</h1>
+                <h3>To prove how pathetic humans are, he has granted us one chance. 
+                <br>
+                We have to beat him in a simple game of <strong>Rock, Paper, Scissors</strong>        
+                <br>
+                </h3>
+                <h2> First to 5 wins!</h2>
+                <h2>He says it's statistically improbable for any human to defeat him</h2> 
+                <section class="border">
+                    <h3 class="ready">Ready to save to world?</h3>
+                    <button id="start-button">Play</button>
+                </section>  
+            </div>
+        </div>
+        <div class="game-div">
     <div id='game'>
             <h1 class="heading">Rock, Paper, Scissors</h1>
         <div class="score-div">
@@ -27,12 +34,20 @@ To prove how pathetic humans are, he has granted us one chance. We have to beat 
             <h3>Smith's Score: <span id="computer_score">0</span></h3> 
         </div>
         <div id=choices>
-            <div class="choice-box">
-                <h4 id="user_choice"></h4>
+            <div>
+                <h2>Your Choice</h2>
+                <div class="choice-box">
+                    <h4 id="user_choice"></h4>
+                </div>
             </div>
-            <div class="choice-box">
-                <h4 id="computer_choice"></h4>
-            </div>    
+           
+            <div>
+                <h2>Smith's Choice</h2>
+                <div class="choice-box">
+                    <h4 id="computer_choice"></h4>
+                </div> 
+            </div>
+               
         </div>
         <h4 id="who_won"></h4>
         <div class="emojis">
@@ -41,10 +56,12 @@ To prove how pathetic humans are, he has granted us one chance. We have to beat 
             <span id="scissors">&#9996</span>
         </div>  
     </div>
+    </div>
+    
     <div class="flex">
     <div id="gameOver">
-        <h1>The game is over</h1>
-        <h3 id="win-lose"></h3>
+        <h1 class="final"></h1>
+        <h2 id="win-lose"></h2>
         <h4>He wants to know if you want to play again?</h4>
         <button id="again-button">Try Again?</button>
     </div>
