@@ -7,10 +7,12 @@ body {
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
+  text-align: center;
 }
-.final {
+.won-lost {
   font-size: 5rem;
 }
+
 .flex {
   height: 100vh;
   display: flex;
@@ -38,7 +40,6 @@ h3 span {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   background-color: rgba(0, 0, 0, 0.822);
   width: 80vw;
   height: 80vh;
@@ -80,13 +81,14 @@ h3 span {
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 #choices {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.border {
+.start-box {
   border: 2px solid rgb(137, 253, 137);
   background-color: rgba(18, 104, 18, 0.815);
   margin-top: 60px;
@@ -137,18 +139,58 @@ h3 span {
   padding: 20px;
 }
 
-#rock:hover {
-  font-size: 15rem;
+@media screen and (min-width: 700px) {
+  #rock:hover {
+    font-size: 15rem;
+  }
+  #paper:hover {
+    font-size: 15rem;
+  }
+  #scissors:hover {
+    font-size: 15rem;
+  }
+  #start-button:hover {
+    box-shadow: 4px 4px 8px rgb(0, 240, 52);
+  }
+  #again-button:hover {
+    box-shadow: 4px 4px 8px rgb(0, 240, 52);
+  }
 }
-#paper:hover {
-  font-size: 15rem;
-}
-#scissors:hover {
-  font-size: 15rem;
-}
-#start-button:hover {
-  box-shadow: 4px 4px 8px rgb(0, 240, 52);
-}
-#again-button:hover {
-  box-shadow: 4px 4px 8px rgb(0, 240, 52);
+@media screen and (max-width: 680px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .score-div h3 {
+    font-size: 0.8rem;
+  }
+  .score-div span {
+    font-size: 1.5rem;
+  }
+  #choices h2 {
+    font-size: 1.2rem;
+  }
+  #rock {
+    margin-top: 40px;
+    font-size: 5rem;
+  }
+  #paper {
+    margin-top: 40px;
+    font-size: 5rem;
+  }
+  #scissors {
+    margin-top: 40px;
+    font-size: 5rem;
+  }
+  .won-lost {
+    font-size: 4rem;
+  }
+  .start-box {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .ready {
+    font-size: 1.2rem;
+    padding: 0px;
+    margin: 10px;
+  }
 }

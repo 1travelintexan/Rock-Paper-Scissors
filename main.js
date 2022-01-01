@@ -14,8 +14,8 @@ let gameOverScreen = document.querySelector("#gameOver");
 let gameScreen = document.querySelector("#game");
 let userBox = document.querySelector("#user_choice");
 let computerBox = document.querySelector("#computer_choice");
-let winLose = document.querySelector("#win-lose");
-let final = document.querySelector(".final");
+let winLose = document.querySelector("#final-para");
+let final = document.querySelector(".won-lost");
 let splashDiv = document.querySelector(".splash-div");
 
 const computerPlay = () => {
