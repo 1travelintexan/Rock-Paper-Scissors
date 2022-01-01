@@ -1,23 +1,18 @@
 body {
   margin: 0px;
   padding: 0;
-  z-index: -2;
   color: rgb(0, 240, 52);
   background-image: url("./images/matrix.png");
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
   text-align: center;
-}
-.won-lost {
-  font-size: 5rem;
-}
-
-.flex {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.won-lost {
+  font-size: 5rem;
 }
 .splash-div {
   height: 100vh;
